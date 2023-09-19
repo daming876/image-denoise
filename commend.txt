@@ -1,0 +1,9 @@
+# Reference: UMD-pytorch
+# you must stay in `/code/UMD-pytorch`
+
+# done
+CUDA_VISIBLE_DEVICES=0    python prepare_patches.py --gray
+
+# train
+CUDA_VISIBLE_DEVICES=1 python train.py  --model_name UMDNet  --batch_size 128  --epochs 80  --noiseIntL 0 75  --val_noiseL 25
+
